@@ -1,5 +1,6 @@
-library(stringr)
-library(data.table)
+list.of.packages <- c("stringr", "data.table")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
 
 ##' load data
 train_events <- fread("./data/events_train.csv")
