@@ -15,5 +15,5 @@ submission <- sample_labels %>% as.data.frame()
 submission$user_id <- str_pad(submission$user_id, 8, pad = "0")
 submission$title_id <- str_pad(title.id, 8, pad = "0")
 
-##' write 
+##' write to csv
 write.csv(submission, "./data/results_1.csv", row.names = F)
